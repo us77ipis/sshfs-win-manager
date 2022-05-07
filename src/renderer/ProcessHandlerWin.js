@@ -29,8 +29,7 @@ class ProcessHandlerWin {
         `-ovolname=${conn.name.substr(0, 32)}`,
         '-odebug',
         '-ologlevel=debug1',
-        '-oStrictHostKeyChecking=no',
-        '-oUserKnownHostsFile=/dev/null'
+        '-oStrictHostKeyChecking=accept-new'
       ]
 
       if (!fileExistsSync(this.settings.sshfsBinary)) {
